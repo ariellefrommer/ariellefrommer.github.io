@@ -5,4 +5,14 @@ title: Writing
 
 # Writing
 
-See info about writing...
+## Science Writing
+
+# Outreach & Mentorship
+
+## Museum Outreach
+
+## Harvard Astronomy Society
+
+## Freshman Mentoring
+
+FOP, PAF, etc. 

@@ -5,4 +5,4 @@ title: Contact
 
 # Contact
 
-You can reach me at: [afrommer@college.harvard.edu](mailto:afrommer@college.harvard.edu)
+You can reach me at: [afrommer@college.harvard.edu](mailto:afrommer@college.harvard.edu) or [frommerarielle@gmail.com].
