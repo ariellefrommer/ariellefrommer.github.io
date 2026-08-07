@@ -43,4 +43,13 @@
         }
     });
 
+    // Expandable research cards
+    document.querySelectorAll('.research-card-summary').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            const card = this.closest('.research-card');
+            const isOpen = card.classList.toggle('is-open');
+            this.setAttribute('aria-expanded', String(isOpen));
+        });
+    });
+
 }());
