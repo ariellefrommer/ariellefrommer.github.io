@@ -854,8 +854,9 @@ img { max-width: 100%; height: auto; display: block; }
 @media (max-width: 820px) {
 
     body {
+        background-image: linear-gradient(rgba(69, 57, 105, 0.3), rgba(69, 57, 105, 0.3)), url('../../images/starry-night-rhone-mobile.jpg');
         background-attachment: scroll, scroll;
-        background-position: center, center 30%;
+        background-position: center, center;
     }
 
     .panel-grid {
