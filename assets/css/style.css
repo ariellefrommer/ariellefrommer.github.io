@@ -786,11 +786,6 @@ img { max-width: 100%; height: auto; display: block; }
     border-radius: var(--radius);
 }
 
-.cv-mobile-btn {
-    display: none;
-    margin: 1.5rem auto 0;
-}
-
 /* =====================
    Buttons
    ===================== */
@@ -861,13 +856,6 @@ img { max-width: 100%; height: auto; display: block; }
     body {
         background-attachment: scroll, scroll;
         background-position: center, center 30%;
-    }
-
-    .cv-embed-wrap {
-        display: none;
-    }
-    .cv-mobile-btn {
-        display: inline-flex;
     }
 
     .panel-grid {
