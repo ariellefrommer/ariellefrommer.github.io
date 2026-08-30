@@ -4,10 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Arielle Frommer — PhD student in Astronomy at Yale University and science journalist for Sky & Telescope." />
-    <title>Arielle Frommer | Astronomy PhD Candidate & Science Journalist</title>
+    <title>Arielle Frommer | Astronomer</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@400;500;600&family=DM+Serif+Display&family=Inter:wght@300;400&family=Cormorant+Garamond:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@400;500;600&family=DM+Serif+Display&family=Inter:wght@300;400&family=Cormorant+Garamond:wght@300;400;500&family=Playfair+Display:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Merriweather:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -19,9 +20,14 @@
         <a class="brand tab-link active" data-target="home">
             <span class="brand-name">Arielle Frommer</span>
             <svg class="brand-planet" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="16" cy="16" r="13" fill="none" stroke="#9bbfe6" stroke-width="1.1" opacity="0.5"/>
-                <circle cx="16" cy="16" r="5.5" fill="#6a9fd8"/>
-                <circle cx="29" cy="16" r="2.9" fill="#3a5f94"/>
+                <defs>
+                    <clipPath id="ringFrontClip">
+                        <rect x="0" y="15.6" width="32" height="16" transform="rotate(-20 16 15.6)"/>
+                    </clipPath>
+                </defs>
+                <ellipse class="ring-breaks-2" cx="16" cy="15.6" rx="10" ry="3.2" fill="none" stroke="#a3c6e8" stroke-width="1.8" opacity="0.95" transform="rotate(-20 16 15.6)"/>
+                <circle cx="16" cy="16" r="6" fill="#6089ba"/>
+                <ellipse class="ring-breaks-2" cx="16" cy="15.6" rx="10" ry="3.2" fill="none" stroke="#a3c6e8" stroke-width="1.8" opacity="0.95" transform="rotate(-20 16 15.6)" clip-path="url(#ringFrontClip)"/>
             </svg>
         </a>
         <nav id="main-nav">
@@ -46,33 +52,22 @@
     <section id="home" class="tab-content active">
 
         <div class="container section-body">
+
+
             <div class="landing">
-                <img src="images/picture.jpg" alt="Arielle Frommer" class="landing-photo">
+                <img src="images/website-pic.jpg" alt="Arielle Frommer" class="landing-photo">
                 <div class="landing-text">
                     <h1 class="landing-name">Arielle Frommer</h1>
+                    <p class="landing-tagline">Yale Astronomy PhD Student, NSF GRFP and Gruber Science Fellow</p>
                     <p class="landing-hello">
-                        Hello and welcome to my website! My name is Arielle Frommer and I'm an Astronomy PhD
-                        student at Yale and science journalist. My research focuses on planets orbiting stars
-                        outside the solar system, and I like to write about new astronomical discoveries for
-                        <a href="https://skyandtelescope.org/author/arielle-frommer/" target="_blank" rel="noopener"><em>Sky &amp; Telescope</em></a>.
+                        Welcome to my website! My name is Arielle Frommer and I'm an astronomy graduate
+                        student and science journalist. My research focuses on planets orbiting stars
+                        outside the solar system, and I've written about astronomy news for
+                        <a href="https://skyandtelescope.org/author/arielle-frommer/" target="_blank" rel="noopener"><em>Sky &amp; Telescope</em></a>
+                        and <a href="https://www.scientificamerican.com/author/arielle-frommer/" target="_blank" rel="noopener"><em>Scientific American</em></a>.
                         You can reach me at <a href="mailto:arielle.frommer@yale.edu">arielle.frommer@yale.edu</a>
                         &mdash; I'd love to chat!
                     </p>
-                    <div class="social-links">
-                        <a href="https://github.com/ariellefrommer" target="_blank" rel="noopener" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/arielle-frommer-a021a3210/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="mailto:arielle.frommer@yale.edu" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a class="tab-link" data-target="cv" aria-label="CV">
-                            <i class="fas fa-file-pdf"></i>
-                        </a>
-                    </div>
-                    <p class="wip-note">Site is still a work in progress &mdash; thanks for your patience!</p>
                 </div>
             </div>
         </div>
@@ -86,8 +81,9 @@
         <div class="container section-body">
 
             <p class="home-intro">
-                Hello! I'm an incoming Astronomy PhD student at
-                <strong>Yale</strong> and an NSF GRFP and Yale Gruber Science Fellow.
+                Hello! I&rsquo;m an Astronomy PhD student at Yale University and an NSF GRFP and Yale
+                Gruber Science Fellow. I am interested in exoplanet atmospheres, demographics, and applying machine
+                learning and computational techniques to study them!
             </p>
 
             <div class="bio-grid">
@@ -98,31 +94,25 @@
 
                 <div class="bio-text-col">
                     <p>
-                        My research focuses on exoplanets — planets that orbit stars outside our solar system.
-                        I hope to use observations and computational tools to answer key questions regarding how
-                        planets form, why they vary across different systems, and whether any could host life.
-                    </p>
-                    <p>
-                        I obtained my B.A. in Astrophysics and Physics from <strong>Harvard University</strong>
-                        in May 2025, graduating cum laude with highest honors from the Astronomy department.
-                        After graduating, I spent eight months studying exoplanet atmospheres at
-                        <strong>Leiden University</strong> in the Netherlands, funded by Harvard's Alex G. Booth
-                        Fellowship.
+                        I hope to answer key questions regarding how planets form, why they vary across different
+                        systems, and whether any could host life. I obtained my BA in Astrophysics and Physics from
+                        Harvard University in May 2025, graduating cum laude with highest honors from
+                        the Astronomy department. After graduating, I spent eight months studying exoplanet
+                        atmospheres at Leiden University in the Netherlands, funded by Harvard's
+                        Alex G. Booth Fellowship.
                     </p>
                     <p>
                         Beyond research, I am also passionate about science communication and outreach! I've
-                        written dozens of articles as a contributing journalist to the astronomy magazine
-                        <a href="https://skyandtelescope.org/author/arielle-frommer/" target="_blank" rel="noopener"><em>Sky &amp; Telescope</em></a>,
+                        written dozens of articles for the astronomy magazine
+                        <em>Sky &amp; Telescope</em>,
                         created educational tours on art and astronomy as a student guide at the
                         Harvard Art Museums, and led tours of the night sky as a volunteer
-                        at the Mystic Seaport Treworgy Planetarium.
+                        at Mystic Seaport's Treworgy Planetarium.
                     </p>
                     <p class="bio-full-width">
                         I'm originally from New London, Connecticut, and in my free time,
                         I like hiking, crocheting, going to art museums, solving NYT cross puzzles, dancing,
-                        and reading and writing fiction. Please reach out at
-                        <a href="mailto:arielle.frommer@yale.edu">arielle.frommer@yale.edu</a> if you're
-                        interested in chatting!
+                        and reading and writing fiction!
                     </p>
                 </div>
 
@@ -143,10 +133,6 @@
                         <div class="research-card-photo">
                             <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
                                 <rect width="100" height="100" fill="#191233"/>
-                                <circle cx="24" cy="20" r="0.7" fill="#ffffff" opacity="0.5"/>
-                                <circle cx="82" cy="72" r="0.9" fill="#ffffff" opacity="0.4"/>
-                                <circle cx="70" cy="16" r="0.6" fill="#ffffff" opacity="0.6"/>
-                                <circle cx="14" cy="78" r="0.6" fill="#ffffff" opacity="0.4"/>
                                 <clipPath id="planetClip1"><circle cx="50" cy="52" r="36"/></clipPath>
                                 <g clip-path="url(#planetClip1)">
                                     <rect x="8" y="16" width="84" height="72" fill="#c1694f"/>
@@ -168,9 +154,8 @@
                         <div class="research-card-details">
                             <div class="research-card-details-inner">
                                 <p>Planetary atmospheres are a window into a planet's composition and formation history. Specifically, the ratio between different isotopes can probe the age and formation pathways of different planets, brown dwarfs, and stars. Obtaining this measurement for a hot Jupiter, a rare type of planet with several speculated formation pathways, would be interesting and may shed light on its formation history. This measurement has not yet been constrained due to challenges with low signal-to-noise.</p>
-                                <p>Working with Professor Ignas Snellen at Leiden Observatory, I aimed to measure this ratio between carbon monoxide with carbon-12 vs. carbon-13 (12CO/13CO) for the hot Jupiter WASP-39b. While we robustly confirmed the presence of 13-CO in WASP-39b's atmosphere, the first for a hot Jupiter, we could not constrain the exact ratio with certainty. We also found that noise can bias our measurements to find more 13-CO than is present. I am preparing a first-author paper to be submitted to Astronomy &amp; Astrophysics!</p>
+                                <p>Working with Professor Ignas Snellen at Leiden Observatory, I aimed to measure this ratio between carbon monoxide with carbon-12 vs. carbon-13 (<sup>12</sup>CO/<sup>13</sup>CO) for the hot Jupiter WASP-39b. While we robustly confirmed the presence of <sup>13</sup>CO in WASP-39b's atmosphere, the first for a hot Jupiter, we could not constrain the exact ratio with certainty. We also found that noise can bias our measurements to find more <sup>13</sup>CO than is present. I presented this work in Leiden and at the Emerging Researchers in Exoplanet Science (ERES) XI conference, and I am preparing a first-author paper to be submitted to Astronomy &amp; Astrophysics!</p>
                                 <div class="research-row-actions">
-                                    <a href="files/presentation_exoplanets_meeting.pdf" target="_blank" rel="noopener" class="btn btn-primary">Presentation</a>
                                     <a href="files/ERES_poster.pdf" target="_blank" rel="noopener" class="btn btn-primary">Poster</a>
                                 </div>
                             </div>
@@ -227,7 +212,8 @@
                                 <p>The Transiting Exoplanet Survey Satellite (TESS) has revolutionized our understanding of planetary systems by finding hundreds of exoplanets, allowing us to draw conclusions about their formation, evolution, and population demographics. TESS searches for exoplanets via the transit method — periodic dimmings of light when a planet passes in front of its host star. TESS currently applies the Pre-search Data Conditioning (PDC) algorithm to correct for systematic noise, originating from known and unknown causes. While PDC noise correction relies on linear feature extraction, non-linear machine learning techniques could provide a more sophisticated and flexible noise correction, enabling us to extract stronger signals and detect more planets.</p>
                                 <p>Advised by Dr. Jason Eastman and Professor Andrew Vanderburg, I investigated the possibility of using an autoencoder to extract and remove systematics for my Harvard senior thesis. The autoencoder utilizes a non-linear neural network to reconstruct data based on systematic features (i.e. the noise), while ignoring unique transit signals that we aim to preserve. However, my first batch of noise-corrected light curves had modified transits — indicating that the autoencoder is learning to reconstruct specific astrophysical signals in addition to systematics — and I am currently refining the autoencoder pipeline to only preserve systematics. If our autoencoder improves the systematic error floor while preserving transits, it could improve our measurement precision of existing planets and enable the detection of new worlds.</p>
                                 <div class="research-row-actions">
-                                    <a href="#" class="btn btn-primary">Paper / Presentation</a>
+                                    <a href="files/AY99_presentation.pdf" target="_blank" rel="noopener" class="btn btn-primary">Presentation</a>
+                                    <a href="files/Senior_Thesis.pdf" target="_blank" rel="noopener" class="btn btn-primary">Thesis</a>
                                 </div>
                             </div>
                         </div>
@@ -245,14 +231,13 @@
                                 <circle cx="12" cy="60" r="0.6" fill="#ffffff" opacity="0.4"/>
                                 <circle cx="90" cy="82" r="0.8" fill="#ffffff" opacity="0.4"/>
                                 <ellipse cx="30" cy="58" rx="16" ry="7" fill="none" stroke="#c1694f" stroke-width="1" opacity="0.55"/>
-                                <path d="M 34 44 Q 66 20 80 46" fill="none" stroke="#c1694f" stroke-width="1" opacity="0.4" stroke-dasharray="2,3"/>
                                 <circle cx="24" cy="54" r="6" fill="#e0a179"/>
                                 <circle cx="37" cy="62" r="7.5" fill="#c1694f"/>
                                 <circle cx="80" cy="46" r="10" fill="#8f3b28"/>
                             </svg>
                         </div>
                         <div class="research-card-summary-text">
-                            <p class="research-card-category">Characterizing False Positives</p>
+                            <p class="research-card-category">False Positives</p>
                             <h3>A Paradigm Shift in False Positive Identification with HIP-44302</h3>
                         </div>
                         <i class="fas fa-chevron-down research-card-chevron" aria-hidden="true"></i>
@@ -261,9 +246,8 @@
                         <div class="research-card-details">
                             <div class="research-card-details-inner">
                                 <p>In the search for planets transiting other stars, false positive candidates like binary star systems can slip through the cracks. Detecting and ruling out these false positives is crucial to improving our understanding of exoplanet populations. When I set out to model the TESS candidate TOI-568 for my Harvard junior thesis, we quickly suspected that it was a binary star system instead due to the V-shaped transit. But when we obtained photometry showing two widely-separated stars, we realized instead that we had a triple star system on our hands.</p>
-                                <p>Working with Dr. Jason Eastman and incorporating direct imaging, transit data, and photometry, I characterized the system using the planetary modeling tool EXOFASTv2, finding that the system contains two massive A-type stars, one of which was on a polar orbit, and a third G-star orbiting one of the A-stars. We introduced several new capabilities within EXOFASTv2 to properly model this complex triple-star system, which can now be applied to multi-star and multi-planet systems. Our successful modeling demonstrates a new paradigm for identifying false positives, in which we utilize multiple data sources and rigorous modeling to definitively characterize a system.</p>
+                                <p>Working with Dr. Jason Eastman and incorporating direct imaging, transit data, and photometry, I characterized the system using the planetary modeling tool EXOFASTv2, finding that the system contains two massive A-type stars, one of which was on a polar orbit, and a third G-star orbiting one of the A-stars. We introduced several new capabilities within EXOFASTv2 to properly model this complex triple-star system, which can now be applied to multi-star and multi-planet systems. Our successful modeling demonstrates a new paradigm for identifying false positives, in which we utilize multiple data sources and rigorous modeling to definitively characterize a system, and I've submitted a first-author paper to The Astronomical Journal.</p>
                                 <div class="research-row-actions">
-                                    <a href="#" class="btn btn-primary">Presentation</a>
                                     <a href="https://arxiv.org/abs/2511.21817" target="_blank" rel="noopener" class="btn btn-primary">Paper</a>
                                 </div>
                             </div>
@@ -280,13 +264,61 @@
     <section id="writing" class="tab-content">
 
         <div class="container section-body">
-            <div class="writing-header-actions">
-                <a href="https://skyandtelescope.org/author/arielle-frommer/" class="btn btn-primary" target="_blank" rel="noopener">
-                    <i class="fas fa-external-link-alt"></i> All Articles on Sky &amp; Telescope
+            <p class="writing-intro">Science is made more meaningful when shared, inspiring curiosity and deeper questions. I hope to use my voice to communicate why our research is important, generate more enthusiasm for science, and shed light on new ideas! I've written for <em>Sky &amp; Telescope</em> and <em>Scientific American</em>, and got my start at <em>The Harvard Crimson</em>, my college newspaper. Here are some of my favorite clips:</p>
+
+            <div class="panel-grid">
+                <a href="https://www.scientificamerican.com/article/orbital-data-centers-could-transform-our-night-sky-forever/" target="_blank" rel="noopener" class="panel">
+                    <video class="panel-media" src="videos/orbital-data-centers.mp4" autoplay muted loop playsinline></video>
+                    <div class="panel-overlay">
+                        <p class="panel-outlet">Scientific American</p>
+                        <h4 class="panel-title">Orbital Data Centers Could Transform Our Night Sky Forever</h4>
+                    </div>
                 </a>
+                <a href="https://skyandtelescope.org/astronomy-news/first-atmosphere-terrestrial-world/" target="_blank" rel="noopener" class="panel">
+                    <img src="images/first-atmosphere.jpg" alt="" class="panel-media">
+                    <div class="panel-overlay">
+                        <p class="panel-outlet">Sky &amp; Telescope</p>
+                        <h4 class="panel-title">First Atmosphere Detected on a Terrestrial World</h4>
+                    </div>
+                </a>
+                <a href="https://skyandtelescope.org/astronomy-news/starless-gas-cloud-might-hide-a-clump-of-dark-matter/" target="_blank" rel="noopener" class="panel">
+                    <img src="images/failed-galaxy.jpg" alt="" class="panel-media">
+                    <div class="panel-overlay">
+                        <p class="panel-outlet">Sky &amp; Telescope</p>
+                        <h4 class="panel-title">Starless Gas Cloud Might Be a Failed Galaxy</h4>
+                    </div>
+                </a>
+                <a href="https://skyandtelescope.org/astronomy-news/thirty-meter-telescope-considers-move-to-spain/" target="_blank" rel="noopener" class="panel">
+                    <img src="images/tmt.jpg" alt="" class="panel-media">
+                    <div class="panel-overlay">
+                        <p class="panel-outlet">Sky &amp; Telescope</p>
+                        <h4 class="panel-title">Thirty Meter Telescope Considers Move to Spain</h4>
+                    </div>
+                </a>
+                <a href="https://www.thecrimson.com/column/where-the-cosmos-touches-the-canvas/article/2025/4/24/where-the-cosmos-touches-the-canvas-rutherfurd-lunar-photography/" target="_blank" rel="noopener" class="panel panel-faded">
+                    <img src="images/new-moon.jpg" alt="" class="panel-media">
+                    <div class="panel-overlay">
+                        <p class="panel-outlet">The Harvard Crimson</p>
+                        <h4 class="panel-title">Photographing the Moon: One Man's Quest to Capture the Lunar Surface</h4>
+                    </div>
+                </a>
+                <div class="panel panel-logos">
+                    <p class="panel-logos-label">All Articles &rarr;</p>
+                    <div class="panel-logos-row">
+                        <a href="https://www.scientificamerican.com/author/arielle-frommer/" target="_blank" rel="noopener" class="outlet-logo-link" aria-label="Scientific American — All Articles">
+                            <img src="images/scientific_american_logo.jpeg" alt="Scientific American" class="outlet-logo-img">
+                        </a>
+                        <a href="https://skyandtelescope.org/author/arielle-frommer/" target="_blank" rel="noopener" class="outlet-logo-link" aria-label="Sky &amp; Telescope — All Articles">
+                            <img src="images/skyandtel_logo.jpg" alt="Sky &amp; Telescope" class="outlet-logo-img">
+                        </a>
+                        <a href="https://www.thecrimson.com/writer/1217367/Arielle_C._Frommer/" target="_blank" rel="noopener" class="outlet-logo-link" aria-label="The Harvard Crimson — All Articles">
+                            <img src="images/crimson-logo.webp" alt="The Harvard Crimson" class="outlet-logo-img">
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <p class="wip-note">[Work in Progress]</p>
+            <p class="writing-intro">I also penned a 3,000-word feature on ocean worlds for <em>Sky &amp; Telescope</em>'s print magazine in their <a href="https://skyandtelescope.org/sky-and-telescope-magazine/inside-the-may-2026-issue/" target="_blank" rel="noopener">May 2026 issue</a>, and I'm writing a new feature for 2027. I'm always on the hunt for new stories to write! If you're an astronomer looking to share an exciting discovery, or an outlet looking for someone to cover a story, I would love to connect.</p>
         </div>
 
     </section>
@@ -296,7 +328,39 @@
 
         <div class="container section-body">
 
-            <p class="wip-note">[Work in Progress]</p>
+            <div class="outreach-row">
+                <div class="outreach-photo-group">
+                    <div class="outreach-photo">
+                        <img src="images/astrosoc-panel.jpg" alt="AstroSoc panel on research" class="outreach-photo-img">
+                        <p class="outreach-photo-caption">AstroSoc panel on research</p>
+                    </div>
+                    <div class="outreach-photo">
+                        <img src="images/art-museum-tour.jpg" alt="Art museum tour with friends" class="outreach-photo-img outreach-photo-vibrant">
+                        <p class="outreach-photo-caption">Friends at my tour</p>
+                    </div>
+                </div>
+                <div class="outreach-text">
+                    <p>I&rsquo;ve also been involved in community outreach! At Harvard, I led the <strong>Undergraduate Astronomy Society (AstroSoc)</strong> as Co-President, organizing biweekly dinners, mentorship programs, informative panels, and outreach to foster community for undergraduates in the astronomy department.</p>
+                    <p>As a <a href="https://harvardartmuseums.org/visit/policies/student-guide-tours" target="_blank" rel="noopener"><strong>Ho Family Student Guide</strong></a> at the <strong>Harvard Art Museums</strong>, I designed and gave original, research-based tours on <a href="https://harvardartmuseums.org/calendar/spotlight-tour-out-of-this-world-with-arielle-frommer-25-6" target="_blank" rel="noopener">art and astronomy</a> and <a href="https://harvardartmuseums.org/calendar/spotlight-tour-art-and-poetry-with-arielle-frommer-25" target="_blank" rel="noopener">art and poetry</a>. My art and astronomy tour in particular was an amazing opportunity to make science and art more accessible and explore how the disciplines intersect in their endeavors to make sense of our world. I also contributed an essay to &ldquo;A Collection of Perspectives: Ho Family Student Guides at the Harvard Art Museums,&rdquo; a series of student guide essays published by the Harvard Art Museums, which can be found <a href="https://www.instagram.com/p/C2BCS3GrpOr/?hl=en&amp;img_index=2" target="_blank" rel="noopener">here</a>.</p>
+                </div>
+            </div>
+
+            <div class="outreach-row outreach-row-reverse">
+                <div class="outreach-photo">
+                    <img src="images/pieterskerk.jpg" alt="Pieterskerk in Leiden" class="outreach-photo-img">
+                    <p class="outreach-photo-caption">Leiden&rsquo;s Pieterskerk, which houses the Pilgrim museum</p>
+                </div>
+                <p class="outreach-text">In the Netherlands, I volunteered with Leiden&rsquo;s <a href="https://aot.strw.leidenuniv.nl/" target="_blank" rel="noopener"><strong>Astronomy on Tap</strong></a>, an outreach initiative which organizes monthly public talks at local astronomy bars, making science more accessible to the public. I co-ran the program&rsquo;s social media and newsletter while in Leiden. As a lover of museums, I also sought out an opportunity to volunteer for the <strong>Leiden Pilgrim Museum</strong>, which highlights the Pilgrims&rsquo; 12-year stay in Leiden before they journeyed on to the New World. As a museum docent, I greeted visitors and answered questions about the collection.</p>
+            </div>
+
+            <div class="outreach-row">
+                <div class="outreach-photo">
+                    <img src="images/treworgy.jpg" alt="Treworgy Planetarium entrance" class="outreach-photo-img">
+                    <p class="outreach-photo-caption">Treworgy Planetarium</p>
+                </div>
+                <p class="outreach-text">I&rsquo;ve also volunteered with the <strong>Mystic Seaport Treworgy Planetarium</strong> in Mystic, CT, an amazing live planetarium with a 65-year-old star projector and numerous educational programs. As a volunteer, I led a 30-minute live planetarium show on the current night sky in our backyard, delivering 2-4 shows a week. I&rsquo;m currently on leave as I start my PhD in New Haven, but hope to rejoin them when I can!</p>
+            </div>
+
         </div>
 
     </section>
@@ -318,8 +382,18 @@
 <!-- ===== FOOTER ===== -->
 <footer id="site-footer">
     <div class="container">
-        <p class="footer-copy">&copy; 2026 Arielle Frommer. <span class="footer-credit">Background: <em>Starry Night Over the Rhône</em>, Vincent van Gogh</span></p>
-        <p class="footer-credit">Fonts: Georgia (headings), Poppins (body text)</p>
+        <div class="social-links footer-social-links">
+            <a href="https://github.com/ariellefrommer" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/arielle-frommer-a021a3210/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:arielle.frommer@yale.edu" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <p class="footer-copy">Built with Claude Code. <span class="footer-credit">Background: <em>Starry Night Over the Rhône</em>, Vincent van Gogh</span></p>
     </div>
 </footer>
 

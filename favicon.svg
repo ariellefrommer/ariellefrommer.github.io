@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <defs>
+        <clipPath id="ringFrontClip">
+            <rect x="0" y="15.6" width="32" height="16" transform="rotate(-20 16 15.6)"/>
+        </clipPath>
+    </defs>
+    <ellipse cx="16" cy="15.6" rx="10" ry="3" fill="none" stroke="#a3c6e8" stroke-width="1.8" opacity="0.9" transform="rotate(-20 16 15.6)"/>
+    <circle cx="16" cy="16" r="6" fill="#6089ba"/>
+    <ellipse cx="16" cy="15.6" rx="10" ry="3" fill="none" stroke="#a3c6e8" stroke-width="1.8" opacity="0.9" transform="rotate(-20 16 15.6)" clip-path="url(#ringFrontClip)"/>
+</svg>
