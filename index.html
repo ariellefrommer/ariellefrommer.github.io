@@ -20,7 +20,6 @@
     <meta name="twitter:description" content="PhD student in Astronomy at Yale University and science journalist for Sky &amp; Telescope." />
     <meta name="twitter:image" content="https://ariellefrommer.github.io/images/og-share.jpg" />
 
-    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@400;500;600&family=DM+Serif+Display&family=Inter:wght@300;400&family=Cormorant+Garamond:wght@300;400;500&family=Playfair+Display:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Merriweather:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
@@ -32,8 +31,7 @@
 <!-- ===== FIXED HEADER ===== -->
 <header id="site-header">
     <div class="header-inner">
-        <a class="brand tab-link active" data-target="home">
-            <span class="brand-name">Arielle Frommer</span>
+        <a class="brand tab-link active" data-target="home" aria-label="Home">
             <svg class="brand-planet" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <defs>
                     <clipPath id="ringFrontClip">
@@ -47,7 +45,7 @@
         </a>
         <nav id="main-nav">
             <ul>
-                <li><a class="tab-link" data-target="about">About Me</a></li>
+                <li><a class="tab-link active" data-target="home">Home</a></li>
                 <li><a class="tab-link" data-target="research">Research</a></li>
                 <li><a class="tab-link" data-target="writing">Writing</a></li>
                 <li><a class="tab-link" data-target="outreach">Outreach</a></li>
@@ -75,7 +73,7 @@
                     <h1 class="landing-name">Arielle Frommer</h1>
                     <p class="landing-tagline">Yale Astronomy PhD Student, NSF GRFP and Gruber Science Fellow</p>
                     <p class="landing-hello">
-                        Welcome to my website! My name is Arielle Frommer and I'm an astronomy graduate
+                        Hello! My name is Arielle Frommer and I'm an astronomy graduate
                         student and science journalist. My research focuses on planets orbiting stars
                         outside the solar system, and I've written about astronomy news for
                         <a href="https://skyandtelescope.org/author/arielle-frommer/" target="_blank" rel="noopener"><em>Sky &amp; Telescope</em></a>
@@ -85,52 +83,25 @@
                     </p>
                 </div>
             </div>
-        </div>
 
-    </section>
-
-    <!-- ==================== ABOUT ME ==================== -->
-    <section id="about" class="tab-content">
-
-        <!-- Bio -->
-        <div class="container section-body">
-
-            <p class="home-intro">
-                Hello! I&rsquo;m an Astronomy PhD student at Yale University and an NSF GRFP and Yale
-                Gruber Science Fellow. I am interested in exoplanet atmospheres, demographics, and applying machine
-                learning and computational techniques to study them!
-            </p>
-
-            <div class="bio-grid">
-
-                <div class="bio-photo-col">
-                    <img src="images/scotland.jpg" alt="Arielle Frommer in Scotland" class="bio-photo">
-                </div>
-
-                <div class="bio-text-col">
-                    <p>
-                        I hope to answer key questions regarding how planets form, why they vary across different
-                        systems, and whether any could host life. I obtained my BA in Astrophysics and Physics from
-                        Harvard University in May 2025, graduating cum laude with highest honors from
-                        the Astronomy department. After graduating, I spent eight months studying exoplanet
-                        atmospheres at Leiden University in the Netherlands, funded by Harvard's
-                        Alex G. Booth Fellowship.
-                    </p>
-                    <p>
-                        Beyond research, I am also passionate about science communication and outreach! I've
-                        written dozens of articles for the astronomy magazine
-                        <em>Sky &amp; Telescope</em>,
-                        created educational tours on art and astronomy as a student guide at the
-                        Harvard Art Museums, and led tours of the night sky as a volunteer
-                        at Mystic Seaport's Treworgy Planetarium.
-                    </p>
-                    <p class="bio-full-width">
-                        I'm originally from New London, Connecticut, and in my free time,
-                        I like hiking, crocheting, going to art museums, solving NYT cross puzzles, dancing,
-                        and reading and writing fiction!
-                    </p>
-                </div>
-
+            <div class="bio-text-col">
+                <p>
+                    I am currently a first-year Astronomy PhD student at Yale University and an NSF GRFP and
+                    Yale Gruber Science Fellow. I'm interested in exoplanet atmospheres, demographics, and
+                    applying machine learning and computational techniques to study them. I obtained my BA in
+                    Astrophysics and Physics from Harvard University in May 2025, graduating cum laude with
+                    highest honors from the Astronomy department. After graduating, I spent eight months
+                    studying exoplanet atmospheres at Leiden University in the Netherlands, funded by
+                    Harvard's Alex G. Booth Fellowship.
+                </p>
+                <p>
+                    Beyond research, I am also passionate about science communication and outreach! I've
+                    written popular science articles on astronomy, created educational tours on art and
+                    astronomy as a student guide at the Harvard Art Museums, and led tours of the night sky
+                    as a volunteer at Mystic Seaport's Treworgy Planetarium. I'm originally from New London, Connecticut, and in my free time,
+                    I like hiking, crocheting, going to art museums, solving NYT cross puzzles, dancing,
+                    and reading and writing fiction!
+                </p>
             </div>
         </div>
 
@@ -139,13 +110,13 @@
     <!-- ==================== RESEARCH ==================== -->
     <section id="research" class="tab-content">
 
-        <div class="container research-page">
+        <div class="container section-body">
             <div class="research-rows">
 
                 <!-- 1. WASP-39b / Leiden -->
-                <div class="research-card">
-                    <button class="research-card-summary" type="button" aria-expanded="false">
-                        <div class="research-card-photo">
+                <div class="research-entry">
+                    <div class="research-entry-header">
+                        <div class="research-entry-media">
                             <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
                                 <rect width="100" height="100" fill="#191233"/>
                                 <clipPath id="planetClip1"><circle cx="50" cy="52" r="36"/></clipPath>
@@ -159,29 +130,58 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="research-card-summary-text">
-                            <p class="research-card-category">Exoplanet Atmospheres</p>
-                            <h3>Measuring Carbon Monoxide Isotopes in WASP-39b</h3>
-                        </div>
-                        <i class="fas fa-chevron-down research-card-chevron" aria-hidden="true"></i>
-                    </button>
-                    <div class="research-card-details-wrap">
-                        <div class="research-card-details">
-                            <div class="research-card-details-inner">
-                                <p>Planetary atmospheres are a window into a planet's composition and formation history. Specifically, the ratio between different isotopes can probe the age and formation pathways of different planets, brown dwarfs, and stars. Obtaining this measurement for a hot Jupiter, a rare type of planet with several speculated formation pathways, would be interesting and may shed light on its formation history. This measurement has not yet been constrained due to challenges with low signal-to-noise.</p>
-                                <p>Working with Professor Ignas Snellen at Leiden Observatory, I aimed to measure this ratio between carbon monoxide with carbon-12 vs. carbon-13 (<sup>12</sup>CO/<sup>13</sup>CO) for the hot Jupiter WASP-39b. While we robustly confirmed the presence of <sup>13</sup>CO in WASP-39b's atmosphere, the first for a hot Jupiter, we could not constrain the exact ratio with certainty. We also found that noise can bias our measurements to find more <sup>13</sup>CO than is present. I presented this work in Leiden and at the Emerging Researchers in Exoplanet Science (ERES) XI conference, and I am preparing a first-author paper to be submitted to Astronomy &amp; Astrophysics!</p>
-                                <div class="research-row-actions">
-                                    <a href="files/ERES_poster.pdf" target="_blank" rel="noopener" class="btn btn-primary">Poster</a>
-                                </div>
+                        <div class="research-entry-heading">
+                            <div>
+                                <p class="research-card-category">Exoplanet atmospheres</p>
+                                <h3>Measuring carbon monoxide isotopes in WASP-39b</h3>
+                            </div>
+                            <div class="research-row-actions">
+                                <a href="files/ERES_poster.pdf" target="_blank" rel="noopener" class="btn btn-primary">Poster</a>
                             </div>
                         </div>
+                    </div>
+                    <div class="research-entry-body">
+                        <p>Planetary atmospheres are a window into a planet's composition and formation history. Specifically, the ratio between different isotopes can probe the age and formation pathways of different planets, brown dwarfs, and stars. Obtaining this measurement for a hot Jupiter, a rare type of planet with several speculated formation pathways, would be interesting and may shed light on its formation history. This measurement has not yet been constrained due to challenges with low signal-to-noise.</p>
+                        <p>Working with Professor Ignas Snellen at Leiden Observatory, I aimed to measure this ratio between carbon monoxide with carbon-12 vs. carbon-13 (<sup>12</sup>CO/<sup>13</sup>CO) for the hot Jupiter WASP-39b. While we robustly confirmed the presence of <sup>13</sup>CO in WASP-39b's atmosphere, the first for a hot Jupiter, we could not constrain the exact ratio with certainty. We also found that noise can bias our measurements to find more <sup>13</sup>CO than is present. I presented this work in Leiden and at the Emerging Researchers in Exoplanet Science (ERES) XI conference, and I am preparing a first-author paper to be submitted to Astronomy &amp; Astrophysics!</p>
+                    </div>
+                </div>
+
+                <!-- 2. Triple-star / Leo Goldberg -->
+                <div class="research-entry">
+                    <div class="research-entry-header">
+                        <div class="research-entry-media">
+                            <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                                <rect width="100" height="100" fill="#191233"/>
+                                <circle cx="20" cy="16" r="0.7" fill="#ffffff" opacity="0.5"/>
+                                <circle cx="88" cy="24" r="0.6" fill="#ffffff" opacity="0.5"/>
+                                <circle cx="12" cy="60" r="0.6" fill="#ffffff" opacity="0.4"/>
+                                <circle cx="90" cy="82" r="0.8" fill="#ffffff" opacity="0.4"/>
+                                <ellipse cx="30" cy="58" rx="16" ry="7" fill="none" stroke="#c1694f" stroke-width="1" opacity="0.55"/>
+                                <circle cx="24" cy="54" r="6" fill="#e0a179"/>
+                                <circle cx="37" cy="62" r="7.5" fill="#c1694f"/>
+                                <circle cx="80" cy="46" r="10" fill="#8f3b28"/>
+                            </svg>
+                        </div>
+                        <div class="research-entry-heading">
+                            <div>
+                                <p class="research-card-category">False positives</p>
+                                <h3>A paradigm shift in false positive identification with HIP-44302</h3>
+                            </div>
+                            <div class="research-row-actions">
+                                <a href="https://arxiv.org/abs/2511.21817" target="_blank" rel="noopener" class="btn btn-primary">Paper</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="research-entry-body">
+                        <p>In the search for planets transiting other stars, false positive candidates like binary star systems can slip through the cracks. Detecting and ruling out these false positives is crucial to improving our understanding of exoplanet populations. When I set out to model the TESS candidate TOI-568 for my Harvard junior thesis, we quickly suspected that it was a binary star system instead due to the V-shaped transit. But when we obtained photometry showing two widely-separated stars, we realized instead that we had a triple star system on our hands.</p>
+                        <p>Working with Dr. Jason Eastman and incorporating direct imaging, transit data, and photometry, I characterized the system using the planetary modeling tool EXOFASTv2, finding that the system contains two massive A-type stars, one of which was on a polar orbit, and a third G-star orbiting one of the A-stars. We introduced several new capabilities within EXOFASTv2 to properly model this complex triple-star system, which can now be applied to multi-star and multi-planet systems. Our successful modeling demonstrates a new paradigm for identifying false positives, in which we utilize multiple data sources and rigorous modeling to definitively characterize a system, and I've submitted a first-author paper to The Astronomical Journal.</p>
                     </div>
                 </div>
 
                 <!-- 3. ML planet detection / Chambliss -->
-                <div class="research-card">
-                    <button class="research-card-summary" type="button" aria-expanded="false">
-                        <div class="research-card-photo">
+                <div class="research-entry">
+                    <div class="research-entry-header">
+                        <div class="research-entry-media">
                             <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
                                 <rect width="100" height="100" fill="#f0ebfa"/>
                                 <g stroke="#b9a9d6" stroke-width="0.6" opacity="0.7">
@@ -215,58 +215,20 @@
                                 <circle cx="80" cy="70" r="3.5" fill="#6a9fd8"/>
                             </svg>
                         </div>
-                        <div class="research-card-summary-text">
-                            <p class="research-card-category">Machine Learning</p>
-                            <h3>Using Machine Learning to Improve TESS's Systematic Error and Find More Planets</h3>
-                        </div>
-                        <i class="fas fa-chevron-down research-card-chevron" aria-hidden="true"></i>
-                    </button>
-                    <div class="research-card-details-wrap">
-                        <div class="research-card-details">
-                            <div class="research-card-details-inner">
-                                <p>The Transiting Exoplanet Survey Satellite (TESS) has revolutionized our understanding of planetary systems by finding hundreds of exoplanets, allowing us to draw conclusions about their formation, evolution, and population demographics. TESS searches for exoplanets via the transit method — periodic dimmings of light when a planet passes in front of its host star. TESS currently applies the Pre-search Data Conditioning (PDC) algorithm to correct for systematic noise, originating from known and unknown causes. While PDC noise correction relies on linear feature extraction, non-linear machine learning techniques could provide a more sophisticated and flexible noise correction, enabling us to extract stronger signals and detect more planets.</p>
-                                <p>Advised by Dr. Jason Eastman and Professor Andrew Vanderburg, I investigated the possibility of using an autoencoder to extract and remove systematics for my Harvard senior thesis. The autoencoder utilizes a non-linear neural network to reconstruct data based on systematic features (i.e. the noise), while ignoring unique transit signals that we aim to preserve. However, my first batch of noise-corrected light curves had modified transits — indicating that the autoencoder is learning to reconstruct specific astrophysical signals in addition to systematics — and I am currently refining the autoencoder pipeline to only preserve systematics. If our autoencoder improves the systematic error floor while preserving transits, it could improve our measurement precision of existing planets and enable the detection of new worlds.</p>
-                                <div class="research-row-actions">
-                                    <a href="files/AY99_presentation.pdf" target="_blank" rel="noopener" class="btn btn-primary">Presentation</a>
-                                    <a href="files/Senior_Thesis.pdf" target="_blank" rel="noopener" class="btn btn-primary">Thesis</a>
-                                </div>
+                        <div class="research-entry-heading">
+                            <div>
+                                <p class="research-card-category">Machine learning</p>
+                                <h3>Using machine learning to improve TESS's systematic error and find more planets</h3>
+                            </div>
+                            <div class="research-row-actions">
+                                <a href="files/AY99_presentation.pdf" target="_blank" rel="noopener" class="btn btn-primary">Presentation</a>
+                                <a href="files/Senior_Thesis.pdf" target="_blank" rel="noopener" class="btn btn-primary">Thesis</a>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- 2. Triple-star / Leo Goldberg -->
-                <div class="research-card">
-                    <button class="research-card-summary" type="button" aria-expanded="false">
-                        <div class="research-card-photo">
-                            <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                                <rect width="100" height="100" fill="#191233"/>
-                                <circle cx="20" cy="16" r="0.7" fill="#ffffff" opacity="0.5"/>
-                                <circle cx="88" cy="24" r="0.6" fill="#ffffff" opacity="0.5"/>
-                                <circle cx="12" cy="60" r="0.6" fill="#ffffff" opacity="0.4"/>
-                                <circle cx="90" cy="82" r="0.8" fill="#ffffff" opacity="0.4"/>
-                                <ellipse cx="30" cy="58" rx="16" ry="7" fill="none" stroke="#c1694f" stroke-width="1" opacity="0.55"/>
-                                <circle cx="24" cy="54" r="6" fill="#e0a179"/>
-                                <circle cx="37" cy="62" r="7.5" fill="#c1694f"/>
-                                <circle cx="80" cy="46" r="10" fill="#8f3b28"/>
-                            </svg>
-                        </div>
-                        <div class="research-card-summary-text">
-                            <p class="research-card-category">False Positives</p>
-                            <h3>A Paradigm Shift in False Positive Identification with HIP-44302</h3>
-                        </div>
-                        <i class="fas fa-chevron-down research-card-chevron" aria-hidden="true"></i>
-                    </button>
-                    <div class="research-card-details-wrap">
-                        <div class="research-card-details">
-                            <div class="research-card-details-inner">
-                                <p>In the search for planets transiting other stars, false positive candidates like binary star systems can slip through the cracks. Detecting and ruling out these false positives is crucial to improving our understanding of exoplanet populations. When I set out to model the TESS candidate TOI-568 for my Harvard junior thesis, we quickly suspected that it was a binary star system instead due to the V-shaped transit. But when we obtained photometry showing two widely-separated stars, we realized instead that we had a triple star system on our hands.</p>
-                                <p>Working with Dr. Jason Eastman and incorporating direct imaging, transit data, and photometry, I characterized the system using the planetary modeling tool EXOFASTv2, finding that the system contains two massive A-type stars, one of which was on a polar orbit, and a third G-star orbiting one of the A-stars. We introduced several new capabilities within EXOFASTv2 to properly model this complex triple-star system, which can now be applied to multi-star and multi-planet systems. Our successful modeling demonstrates a new paradigm for identifying false positives, in which we utilize multiple data sources and rigorous modeling to definitively characterize a system, and I've submitted a first-author paper to The Astronomical Journal.</p>
-                                <div class="research-row-actions">
-                                    <a href="https://arxiv.org/abs/2511.21817" target="_blank" rel="noopener" class="btn btn-primary">Paper</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="research-entry-body">
+                        <p>The Transiting Exoplanet Survey Satellite (TESS) has revolutionized our understanding of planetary systems by finding hundreds of exoplanets, allowing us to draw conclusions about their formation, evolution, and population demographics. TESS searches for exoplanets via the transit method — periodic dimmings of light when a planet passes in front of its host star. TESS currently applies the Pre-search Data Conditioning (PDC) algorithm to correct for systematic noise, originating from known and unknown causes. While PDC noise correction relies on linear feature extraction, non-linear machine learning techniques could provide a more sophisticated and flexible noise correction, enabling us to extract stronger signals and detect more planets.</p>
+                        <p>Advised by Dr. Jason Eastman and Professor Andrew Vanderburg, I investigated the possibility of using an autoencoder to extract and remove systematics for my Harvard senior thesis. The autoencoder utilizes a non-linear neural network to reconstruct data based on systematic features (i.e. the noise), while ignoring unique transit signals that we aim to preserve. However, my first batch of noise-corrected light curves had modified transits — indicating that the autoencoder is learning to reconstruct specific astrophysical signals in addition to systematics — and I am currently refining the autoencoder pipeline to only preserve systematics. If our autoencoder improves the systematic error floor while preserving transits, it could improve our measurement precision of existing planets and enable the detection of new worlds.</p>
                     </div>
                 </div>
 
@@ -281,55 +243,29 @@
         <div class="container section-body">
             <p class="writing-intro">Science is made more meaningful when shared, inspiring curiosity and deeper questions. I hope to use my voice to communicate why our research is important, generate more enthusiasm for science, and shed light on new ideas! I've written for <em>Sky &amp; Telescope</em> and <em>Scientific American</em>, and got my start at <em>The Harvard Crimson</em>, my college newspaper. Here are some of my favorite clips:</p>
 
-            <div class="panel-grid">
-                <a href="https://www.scientificamerican.com/article/orbital-data-centers-could-transform-our-night-sky-forever/" target="_blank" rel="noopener" class="panel">
-                    <video class="panel-media" src="videos/orbital-data-centers.mp4" autoplay muted loop playsinline></video>
-                    <div class="panel-overlay">
-                        <p class="panel-outlet">Scientific American</p>
-                        <h4 class="panel-title">Orbital Data Centers Could Transform Our Night Sky Forever</h4>
-                    </div>
-                </a>
-                <a href="https://skyandtelescope.org/astronomy-news/first-atmosphere-terrestrial-world/" target="_blank" rel="noopener" class="panel">
-                    <img src="images/first-atmosphere.jpg" alt="" class="panel-media">
-                    <div class="panel-overlay">
-                        <p class="panel-outlet">Sky &amp; Telescope</p>
-                        <h4 class="panel-title">First Atmosphere Detected on a Terrestrial World</h4>
-                    </div>
-                </a>
-                <a href="https://skyandtelescope.org/astronomy-news/starless-gas-cloud-might-hide-a-clump-of-dark-matter/" target="_blank" rel="noopener" class="panel">
-                    <img src="images/failed-galaxy.jpg" alt="" class="panel-media">
-                    <div class="panel-overlay">
-                        <p class="panel-outlet">Sky &amp; Telescope</p>
-                        <h4 class="panel-title">Starless Gas Cloud Might Be a Failed Galaxy</h4>
-                    </div>
-                </a>
-                <a href="https://skyandtelescope.org/astronomy-news/thirty-meter-telescope-considers-move-to-spain/" target="_blank" rel="noopener" class="panel">
-                    <img src="images/tmt.jpg" alt="" class="panel-media">
-                    <div class="panel-overlay">
-                        <p class="panel-outlet">Sky &amp; Telescope</p>
-                        <h4 class="panel-title">Thirty Meter Telescope Considers Move to Spain</h4>
-                    </div>
-                </a>
-                <a href="https://www.thecrimson.com/column/where-the-cosmos-touches-the-canvas/article/2025/4/24/where-the-cosmos-touches-the-canvas-rutherfurd-lunar-photography/" target="_blank" rel="noopener" class="panel panel-faded">
-                    <img src="images/new-moon.jpg" alt="" class="panel-media">
-                    <div class="panel-overlay">
-                        <p class="panel-outlet">The Harvard Crimson</p>
-                        <h4 class="panel-title">Photographing the Moon: One Man's Quest to Capture the Lunar Surface</h4>
-                    </div>
-                </a>
-                <div class="panel panel-logos">
-                    <p class="panel-logos-label">All Articles &rarr;</p>
-                    <div class="panel-logos-row">
-                        <a href="https://www.scientificamerican.com/author/arielle-frommer/" target="_blank" rel="noopener" class="outlet-logo-link" aria-label="Scientific American — All Articles">
-                            <img src="images/scientific_american_logo.jpeg" alt="Scientific American" class="outlet-logo-img">
-                        </a>
-                        <a href="https://skyandtelescope.org/author/arielle-frommer/" target="_blank" rel="noopener" class="outlet-logo-link" aria-label="Sky &amp; Telescope — All Articles">
-                            <img src="images/skyandtel_logo.jpg" alt="Sky &amp; Telescope" class="outlet-logo-img">
-                        </a>
-                        <a href="https://www.thecrimson.com/writer/1217367/Arielle_C._Frommer/" target="_blank" rel="noopener" class="outlet-logo-link" aria-label="The Harvard Crimson — All Articles">
-                            <img src="images/crimson-logo.webp" alt="The Harvard Crimson" class="outlet-logo-img">
-                        </a>
-                    </div>
+            <ul class="writing-list">
+                <li><a href="https://www.scientificamerican.com/article/orbital-data-centers-could-transform-our-night-sky-forever/" target="_blank" rel="noopener">Orbital Data Centers Could Transform Our Night Sky Forever</a> <span class="writing-list-outlet">(Scientific American, 8/20/2026)</span></li>
+                <li><a href="https://skyandtelescope.org/astronomy-news/first-atmosphere-terrestrial-world/" target="_blank" rel="noopener">First Atmosphere Detected on a Terrestrial World</a> <span class="writing-list-outlet">(Sky &amp; Telescope, 7/16/2026)</span></li>
+                <li><a href="https://skyandtelescope.org/astronomy-news/nearby-super-earth-has-no-atmosphere/" target="_blank" rel="noopener">Nearby Super-Earth Has No Atmosphere and a Dark, Moon-like Surface</a> <span class="writing-list-outlet">(Sky &amp; Telescope, 5/7/2026)</span></li>
+                <li><a href="https://skyandtelescope.org/astronomy-news/a-nearby-dwarf-galaxy-is-transforming-before-our-eyes/" target="_blank" rel="noopener">A Nearby Dwarf Galaxy is Transforming Before Our Eyes</a> <span class="writing-list-outlet">(Sky &amp; Telescope, 3/16/2026)</span></li>
+                <li><a href="https://skyandtelescope.org/astronomy-news/starless-gas-cloud-might-hide-a-clump-of-dark-matter/" target="_blank" rel="noopener">Starless Gas Cloud Might Be a Failed Galaxy</a> <span class="writing-list-outlet">(Sky &amp; Telescope, 1/8/2026)</span></li>
+                <li><a href="https://skyandtelescope.org/astronomy-news/thirty-meter-telescope-considers-move-to-spain/" target="_blank" rel="noopener">Thirty Meter Telescope Considers Move to Spain</a> <span class="writing-list-outlet">(Sky &amp; Telescope, 11/24/2025)</span></li>
+                <li><a href="https://www.thecrimson.com/column/where-the-cosmos-touches-the-canvas/article/2025/4/24/where-the-cosmos-touches-the-canvas-rutherfurd-lunar-photography/" target="_blank" rel="noopener">Photographing the Moon: One Man's Quest to Capture the Lunar Surface</a> <span class="writing-list-outlet">(The Harvard Crimson, 4/24/2025)</span></li>
+                <li><a href="https://skyandtelescope.org/astronomy-news/ingredients-of-life-discovered-on-near-earth-asteroid-bennu/" target="_blank" rel="noopener">Ingredients of Life Discovered on Near-Earth Asteroid Bennu</a> <span class="writing-list-outlet">(Sky &amp; Telescope, 2/5/2025)</span></li>
+            </ul>
+
+            <div class="writing-outlets">
+                <p class="panel-logos-label">All Articles &rarr;</p>
+                <div class="panel-logos-row">
+                    <a href="https://www.scientificamerican.com/author/arielle-frommer/" target="_blank" rel="noopener" class="outlet-logo-link" aria-label="Scientific American — All Articles">
+                        <img src="images/scientific_american_logo.jpeg" alt="Scientific American" class="outlet-logo-img">
+                    </a>
+                    <a href="https://skyandtelescope.org/author/arielle-frommer/" target="_blank" rel="noopener" class="outlet-logo-link" aria-label="Sky &amp; Telescope — All Articles">
+                        <img src="images/skyandtel_logo.jpg" alt="Sky &amp; Telescope" class="outlet-logo-img">
+                    </a>
+                    <a href="https://www.thecrimson.com/writer/1217367/Arielle_C._Frommer/" target="_blank" rel="noopener" class="outlet-logo-link" aria-label="The Harvard Crimson — All Articles">
+                        <img src="images/crimson-logo.webp" alt="The Harvard Crimson" class="outlet-logo-img">
+                    </a>
                 </div>
             </div>
 
