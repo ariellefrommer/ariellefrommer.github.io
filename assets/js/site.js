@@ -43,4 +43,53 @@
         }
     });
 
+    // Hero painting toggle — click through candidate header paintings per tab
+    // Note: the two Vermeer "Astronomer" paintings (vermeer-astronomer.jpg and
+    // Johannes_Vermeer_-_The_Astronomer_-_WGA24685.jpg, both in header-paintings/)
+    // are intentionally NOT in this rotation — Arielle wants the sepia/brown-toned
+    // Vermeer painting reserved as the (future, static) background for the Art tab
+    // once she's written content for it. Files are kept in header-paintings/ for that.
+    const HERO_PAINTINGS = [
+        { src: 'images/starry-night-rhone.jpg', label: 'Starry Night Over the Rhône — Vincent van Gogh', position: 'center 45%' },
+        { src: 'header-paintings/gare-saint-lazare-hires.jpg', label: 'The Gare Saint-Lazare: Arrival of a Train — Claude Monet' },
+        { src: 'header-paintings/abbey-rotated.png', label: 'The Hours in the Pennsylvania State Capitol — Edwin Austin Abbey' }
+    ];
+
+    // Painting choice is shared across every tab — switching it on one tab
+    // switches it everywhere, and it stays put as you click between tabs.
+    let currentPaintingIndex = 0;
+    const allHeroes = document.querySelectorAll('.tab-hero[data-start]');
+
+    function renderPaintingEverywhere(index) {
+        const n = HERO_PAINTINGS.length;
+        currentPaintingIndex = ((index % n) + n) % n;
+        const painting = HERO_PAINTINGS[currentPaintingIndex];
+        allHeroes.forEach(function (hero) {
+            hero.style.backgroundImage =
+                "linear-gradient(rgba(69, 57, 105, 0.30), rgba(69, 57, 105, 0.30)), url('" + painting.src + "')";
+            hero.style.backgroundSize = painting.size || '';
+            hero.style.backgroundPosition = painting.position || '';
+            const label = hero.querySelector('.hero-painting-label');
+            if (label) label.textContent = painting.label;
+        });
+    }
+
+    allHeroes.forEach(function (hero) {
+        const prev = hero.querySelector('.hero-painting-prev');
+        const next = hero.querySelector('.hero-painting-next');
+
+        if (prev) {
+            prev.addEventListener('click', function () {
+                renderPaintingEverywhere(currentPaintingIndex - 1);
+            });
+        }
+        if (next) {
+            next.addEventListener('click', function () {
+                renderPaintingEverywhere(currentPaintingIndex + 1);
+            });
+        }
+    });
+
+    renderPaintingEverywhere(0);
+
 }());

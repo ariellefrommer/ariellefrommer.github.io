@@ -50,12 +50,7 @@ body {
     font-size: 16px;
     line-height: 1.75;
     color: var(--text);
-    background-image: linear-gradient(rgba(69, 57, 105, 0.3), rgba(69, 57, 105, 0.3)), url('../../images/starry-night-rhone.jpg');
-    background-position: center, top center;
-    background-size: cover, cover;
-    background-attachment: fixed, fixed;
-    background-repeat: no-repeat, no-repeat;
-    background-color: var(--navy);
+    background-color: var(--white);
     padding-top: var(--header-height);
     -webkit-font-smoothing: antialiased;
 }
@@ -190,15 +185,12 @@ img { max-width: 100%; height: auto; display: block; }
    ===================== */
 .tab-content {
     display: none;
-    min-height: calc(100vh - var(--header-height));
 }
 .tab-content.active {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: block;
 }
 
-.tab-content.active .section-hero,
+.tab-content.active .tab-hero,
 .tab-content.active .section-body {
     animation: cardPop 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
     transform-origin: center center;
@@ -214,80 +206,39 @@ img { max-width: 100%; height: auto; display: block; }
    HOME — Landing
    ===================== */
 
-#home .section-body,
-#research .section-body,
-#writing .section-body,
-#outreach .section-body {
-    flex: none;
-    margin-top: 2.5rem;
-}
-
 .landing {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
     padding: 0.7rem 0 1.5rem;
+}
+.landing::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .landing-photo {
+    float: left;
     width: 220px;
     height: 220px;
     border-radius: 0;
     object-fit: cover;
     box-shadow: var(--shadow-hover);
     filter: brightness(0.92);
-    flex-shrink: 0;
+    margin: 0 2rem 1rem 0;
 }
 
-.landing-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    gap: 0.6rem;
-}
-
-.landing-name {
-    font-size: 2rem;
-    color: var(--navy);
-}
-
-.landing-tagline {
-    font-size: 1.05rem;
-    color: var(--purple);
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: -0.01em;
-    white-space: nowrap;
-}
-
-.landing-hello {
-    font-size: 0.97rem;
+.landing-text p {
     color: var(--text);
-    max-width: 620px;
-    line-height: 1.7;
+    font-size: 0.98rem;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+}
+.landing-text p:last-child {
+    margin-bottom: 0;
 }
 
 /* =====================
    Bio
    ===================== */
-
-.bio-text-col {
-    margin-top: 0.5rem;
-}
-
-.bio-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1rem;
-}
-
-.cv-link {
-    font-size: 0.95rem;
-    color: var(--navy);
-}
-.cv-link:hover { color: var(--blue); }
 
 .social-links {
     display: flex;
@@ -307,60 +258,101 @@ img { max-width: 100%; height: auto; display: block; }
     transform: translateY(-2px);
 }
 
-.bio-text-col p {
-    color: var(--text);
-    font-size: 0.98rem;
-    margin-bottom: 1rem;
-}
-
 /* =====================
-   Section Heroes (non-home tabs)
+   Tab Hero (painting banner, top of every tab)
    ===================== */
-.section-hero {
-    width: 100%;
-    max-width: 920px;
-    margin: 2.5rem auto 1.5rem;
-    padding: 2.4rem 2.5rem 2rem;
-    background: rgba(69, 57, 105, 0.97);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    box-shadow: 0 12px 40px rgba(13, 27, 42, 0.35);
-    color: var(--white);
+.tab-hero {
     position: relative;
-    border-radius: var(--radius-lg);
+    width: 100%;
+    min-height: 48vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    background-image: linear-gradient(rgba(69, 57, 105, 0.30), rgba(69, 57, 105, 0.30)), url('../../images/starry-night-rhone.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.section-hero h2 {
-    font-size: clamp(1.5rem, 3vw, 1.9rem);
-    color: var(--lavender);
-    margin-bottom: 0.5rem;
+/* Temporary painting-preview controls — remove once a painting is finalized per tab */
+.hero-painting-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: var(--white);
+    font-size: 1.3rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 1px 6px rgba(13, 27, 42, 0.6);
+    opacity: 0.75;
+    transition: opacity var(--transition);
+    z-index: 2;
 }
-
-.section-hero p {
-    color: rgba(255, 255, 255, 0.92);
-    font-size: 1.15rem;
-    max-width: 640px;
-    line-height: 1.65;
+.hero-painting-nav:hover {
+    opacity: 1;
 }
+.hero-painting-prev { left: 0.5rem; }
+.hero-painting-next { right: 0.5rem; }
 
-
-.section-hero .container {
-    max-width: none;
-    margin: 0;
+.hero-painting-label {
+    position: absolute;
+    bottom: 0.6rem;
+    left: 1rem;
+    font-size: 0.7rem;
+    color: var(--white);
+    background: transparent;
+    text-shadow: 0 1px 6px rgba(13, 27, 42, 0.7);
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.tab-hero-inner {
+    max-width: 760px;
+}
+
+.tab-hero h1 {
+    font-size: clamp(1.9rem, 4.4vw, 2.9rem);
+    color: var(--white);
+    text-shadow: 0 2px 16px rgba(13, 27, 42, 0.4);
+}
+
+.tab-hero h1.hero-title-sm {
+    font-size: clamp(1.7rem, 3.6vw, 2.5rem);
+}
+
+.tab-hero .hero-subtitle {
+    margin-top: 0.7rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -0.01em;
+    text-shadow: 0 2px 10px rgba(13, 27, 42, 0.35);
+}
+
+.tab-white {
+    width: 100%;
+    background: var(--white);
 }
 
 .section-body {
     width: 100%;
     max-width: 920px;
-    margin: 0 auto 2.5rem;
-    flex: 1;
-    background: rgba(255, 255, 255, 0.93);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 12px 40px rgba(13, 27, 42, 0.35);
-    border-radius: var(--radius-lg);
-    padding: 2.5rem;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 3rem 2.5rem;
 }
 
 /* =====================
@@ -608,11 +600,6 @@ img { max-width: 100%; height: auto; display: block; }
 /* =====================
    CV
    ===================== */
-#cv .section-body {
-    flex: none;
-    margin-top: 2.5rem;
-}
-
 .cv-note {
     text-align: center;
     color: var(--text);
@@ -702,20 +689,17 @@ img { max-width: 100%; height: auto; display: block; }
    ===================== */
 @media (max-width: 820px) {
 
-    body {
-        background-image: linear-gradient(rgba(69, 57, 105, 0.3), rgba(69, 57, 105, 0.3)), url('../../images/starry-night-rhone-mobile.jpg');
-        background-attachment: scroll, scroll;
-        background-position: center, center;
+    .tab-hero {
+        background-image: linear-gradient(rgba(69, 57, 105, 0.30), rgba(69, 57, 105, 0.30)), url('../../images/starry-night-rhone-mobile.jpg');
+        min-height: 40vh;
     }
 
-    .landing {
-        flex-direction: column;
-        text-align: center;
-        gap: 1.2rem;
+    .landing-photo {
+        float: none;
+        margin: 0 auto 1.2rem;
     }
 
     .landing-text {
-        align-items: center;
         text-align: center;
     }
 
@@ -761,19 +745,12 @@ img { max-width: 100%; height: auto; display: block; }
 @media (max-width: 560px) {
     .container { padding: 0 1.1rem; }
 
-    .section-hero {
-        padding: 2rem 1.5rem 1.2rem;
-        border-radius: 0;
+    .tab-hero {
+        padding: 2rem 1.5rem;
     }
     .section-body {
-        padding: 1.5rem;
-        margin-left: 0;
-        margin-right: 0;
-        border-radius: 0;
-        background: rgba(255, 255, 255, 0.97);
+        padding: 2rem 1.5rem;
     }
-
-    .landing-tagline { white-space: normal; }
 
     .research-entry {
         padding: 1.75rem 0;
